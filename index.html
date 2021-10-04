@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Cipher</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>ENCODER:</p>
+            <form>
+                <label for="input">INPUT:</label><br>
+                <input type="text"
+                    oninput='encode(document.getElementById("input").value, Number(document.getElementById("userKey").value))'
+                    id="input" name="input"><br>
+
+                <label for="number">CHOOSE "KEY"</label> <br>
+                <input type="number"
+                    oninput='encode(document.getElementById("input").value, Number(document.getElementById("userKey").value))'
+                    id="userKey" name="userKey" value="1">
+                <br>
+
+            </form>
+            <p>OUTPUT:</p>
+            <p id="output"></p>
+        </div>
+        <div class="col-sm-6">
+            <p>DECODER:</p>
+            <form>
+                <label for="input2">INPUT:</label><br>
+                <input type="text"
+                    oninput='decode(document.getElementById("input2").value, Number(document.getElementById("userKey2").value))'
+                    id="input2" name="input2"><br>
+
+                <label for="number2">CHOOSE "KEY"</label> <br>
+                <input type="number"
+                    oninput='decode(document.getElementById("input2").value, Number(document.getElementById("userKey2").value))'
+                    id="userKey2" name="userKey2" value="1">
+                <br>
+
+            </form>
+            <p>OUTPUT:</p>
+            <p id="output2"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
